@@ -1,0 +1,143 @@
+#+TITLE: Javascript Notes
+
+* Learn JavaScript - Full Course for Beginners - freecode camp
+** sauce
+https://www.youtube.com/watch?v=PkZNo7MFNFg
+
+** notes
+*** printing stuff
+#+begin_src js
+console.log('this prints stuff');
+#+end_src
+
+#+RESULTS:
+: this prints stuff
+
+*** comments
+#+begin_src js
+// comments
+/*
+  multi
+  line
+  comments
+ ,/
+#+end_src
+
+*** declaring variables
+no need to cast variable type
+**** var
+declares the variable globally in the program
+**** let
+declares the variable only in the scope
+**** const
+consts declares the variable in the scope and
+
+*** math operations
+mostly the same with all programs
+there are some unique stuff
+**** unique stuff
+***** plusplus
+++ pluses 1 to variable
+#+begin_src js
+var a = 1;
+a++; //adds 1
+console.log(a);
+#+end_src
+
+#+RESULTS:
+: 2
+***** minusminus
+same as plus plus but minus
+#+begin_src js
+var a = 1;
+a--; //subtracts 1
+console.log(a);
+#+end_src
+
+#+RESULTS:
+: 0
+: undefined
+
+*** string operations (un-noted)
+*** arrays
+arrays behave same as lists in python
+**** array operations
+***** push
+appends new element at end of array
+~array.push(element)~
+***** unshift
+appends new element at beginning of array
+~array.unshift(element)~
+***** pop
+removes element from end of array
+~array.pop()~
+***** shift
+removes element from beginning of array
+~array.shift()~
+
+*** functions
+#+begin_src js
+function PrintThese(argumentA, argumentB)
+{
+    console.log(argumentA);
+    console.log(argumentB);
+}
+
+PrintThese(2,7);
+#+end_src
+
+#+RESULTS:
+: 2
+: 7
+: undefined
+
+*** comparisons
+again mostly the same
+but "===" will compare only same type of data formats
+1 is equal to "1" in js (1 == 1)
+"1" will be converted to integer 1
+but (1 === 1) will not be true because not same data type
+*** weird javascript abbreviations
+**** ternary operators
+they are kind of like condensed if statements
+***** format
+[boolean] ? [value returned if true] : [value returned if false]
+***** example
+#+begin_src js
+function IsItNegative(a){
+    console.log(a < 0 ? "positive" : "negative");
+}
+IsItNegative(2);
+IsItNegative(-1);
+#+end_src
+
+#+RESULTS:
+: negative
+: positive
+: undefined
+**** arrow functions
+they are just abbreviations to write small functions
+first is to understand functions can be put into variabls
+like ~var addThese = function(a, b){return a+b;};~
+then you call it like ~addThese(1,2);~
+
+arrow functions are simple abbreviations of the above line
+like ~var addThese = (a,b) => a + b;~
+then you call it like ~addThese(1,2);~
+you just remove the "function" and just state the returning value
+
+**** destructuring(un-noted)
+this is kinda neat but confusing
+it's just a way to declare variables quicker
+**** template literals
+this is like string formatting in python
+if you put a ${some js code} in a string. it will eval the curly brackets and slot in the output in the string
+
+*** inheriting from other files
+**** importing variables from files
+~import {element to import} from"/path/to/file";~
+***** importing everything
+~import * as importedName from "path to file"~
+**** exporting from files
+before variables can be imported to other files they need to be marked to be exported
+~export var = (some data or function)~

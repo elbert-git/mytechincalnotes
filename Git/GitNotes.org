@@ -1,0 +1,50 @@
+#+TITLE: Git Notes
+
+* Git tutorial for beginners: Learn Git in 1 Hour
+** sauce:
+https://www.youtube.com/watch?v=8JJ101D3knE
+** Notes
+*** ways to use git
+1) command line
+2) gui
+just choose which is best
+*** Configs
+**** config levels
+1) system
+   all user configs
+2) global
+   current os user configs
+3) local
+   current repo configs
+**** cmd config format
+~git config --global user.name "elbert"~
+**** Important thing to configure :: crlf
+windows uses cr and lf to denote an end line
+mac and linux uses only lf
+***** if on windows
+configure core.autocrlf to true
+#+BEGIN_SRC
+git config --global core.autocrlf true
+#+END_SRC
+***** if on mac and linux
+configure corel.autocrlf to input
+#+BEGIN_SRC
+git config --global core.autocrlf input
+#+END_SRC
+
+*** cheatsheet
+*** snapshots
+**** git init
+**** git workflow
+***** git add
+***** git commit
+***** git status
+
+
+
+
+
+
+
+* misc notes that should note be remembered
+just take notes as you go along. you are remembering highlights not the entire video. takt thisng out of order and put them in the bucket
