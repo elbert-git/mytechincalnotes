@@ -3,13 +3,50 @@
 * Emacs from scratch series
 ** video 1
 
-** video 1
-** video 1
-** video 1
-** video 1
-** video 1
-** video 1
-** video 1
-** video 1
-** video 1
-** video 1
+* The Absolute Beginner's Guide to Emacs
+** Frames, windows and buffers
+*** Frames
+what you typically think a window should mean. a floating instance of the program on the desktop
+*** Window
+just a single pane on the deskop
+*** Buffers
+they are like tabs. you can put tabs in different frames or windows
+#+BEGIN_SRC
+C-x b --> opens the buffer list
+#+END_SRC
+**** Some important buffers to take note of
+they are always open by default when you run emacs
+1) *Scratch*
+   basically a blank sheet of paper for notes or temporary Elips execution
+2) *Messages*
+   logs of emacs program
+3) *Warnings*
+   for errors
+** Key shortcuts
+*** C-x - the emacs main leader key
+anything to do with emacs the program commands. usually are prefaced with this key, stuff like creating new frame yada yada
+*** C-c - the mode leader Key
+anything to do with the current mode is usually prefaced by this key
+*** some Important default shortcuts to remember
+**** C-x C-f - find file
+opens dired to open a file
+**** C-x C-s - save buffer
+self explanatory
+**** C-x C-w - save as
+save file under new name
+**** C-x b - switch to buffer
+opens a mini buffer to type which buffer to switch to
+**** C-x C-b see all buffers
+see all currently open buffers
+****
+
+**** C-x right arrow or left arrow - switch between buffers
+self explanatory
+
+**** C-g - cancel
+just cancels anything. any long processes or a long chain of mistyped commands
+
+*** How to learn bindings
+Go into M-x to run these commenads
+**** describe-bindings - list of all active bindings in current buffer
+**** describe-key - describe inputted binding
